@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return getText(R.string.fragment_main_routines_name);
                 case 1:
-                    return "SECTION 2";
+                    return getText(R.string.fragment_main_calendar_name);
                 case 2:
-                    return "SECTION 3";
+                    return getText(R.string.fragment_main_exercises_name);
             }
             return null;
         }

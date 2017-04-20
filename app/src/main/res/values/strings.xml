@@ -4,4 +4,5 @@
     <string name="fragment_main_calendar_name">Calendar</string>
     <string name="fragment_main_exercises_name">Exercises</string>
     <string name="fragment_main_routines_name">Routines</string>
+    <string name="title_activity_routine">RoutineActivity</string>
 </resources>
