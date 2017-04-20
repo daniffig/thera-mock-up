@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Exercise;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,23 +33,7 @@ public class ExercisesFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvExercises.setLayoutManager(llm);
 
-        List<Exercise> exerciseList = new ArrayList<Exercise>();
-
-        Exercise e1 = new Exercise();
-        e1.name = "Exercise 1";
-        Exercise e2 = new Exercise();
-        e2.name = "Exercise 2";
-        Exercise e3 = new Exercise();
-        e3.name = "Exercise 3";
-        Exercise e4 = new Exercise();
-        e4.name = "Exercise 4";
-
-        exerciseList.add(e1);
-        exerciseList.add(e2);
-        exerciseList.add(e3);
-        exerciseList.add(e4);
-
-        rvExercises.setAdapter(new ExerciseAdapter(exerciseList));
+        rvExercises.setAdapter(new ExerciseAdapter(Exercise.doSelectAll()));
 
         return rootView;
     }

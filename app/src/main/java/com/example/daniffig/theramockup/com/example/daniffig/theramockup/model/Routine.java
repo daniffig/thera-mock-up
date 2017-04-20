@@ -1,4 +1,4 @@
-package com.example.daniffig.theramockup;
+package com.example.daniffig.theramockup.com.example.daniffig.theramockup.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  */
 
 public class Routine {
-    protected String name;
+    public String name;
 
     public Routine(String name) {
         super();
@@ -28,5 +28,9 @@ public class Routine {
         routineList.add(new Routine("Week 8"));
 
         return routineList;
+    }
+
+    static public Routine doSelectOne(int i) {
+        return Routine.doSelectAll().get(i);
     }
 }

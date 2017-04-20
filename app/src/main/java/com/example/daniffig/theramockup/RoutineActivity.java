@@ -1,11 +1,10 @@
 package com.example.daniffig.theramockup;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+
+import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
 
 public class RoutineActivity extends AppCompatActivity {
 
@@ -18,7 +17,7 @@ public class RoutineActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        setTitle(getIntent().getStringExtra("ACTIVITY_NAME"));
+        setTitle(Routine.doSelectOne(getIntent().getIntExtra("ROUTINE_ID", 1)).name);
     }
 
 }
