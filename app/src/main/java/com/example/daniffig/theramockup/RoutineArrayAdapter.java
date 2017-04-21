@@ -7,16 +7,20 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
+
+import java.util.List;
+
 /**
  * Created by daniffig on 20/04/17.
  */
 
-public class RoutineArrayAdapter extends ArrayAdapter<String> {
+public class RoutineArrayAdapter extends ArrayAdapter<Routine> {
     private final Context context;
-    private final String[] values;
+    private final List<Routine> values;
 
 
-    public RoutineArrayAdapter(Context context, String[] values) {
+    public RoutineArrayAdapter(Context context, List<Routine> values) {
         super(context, R.layout.list_routine, values);
         this.context = context;
         this.values = values;
@@ -29,7 +33,7 @@ public class RoutineArrayAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.list_routine, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.tvRoutinelabel);
 
-        textView.setText(values[position]);
+        textView.setText(values.get(position).name);
 
         return rowView;
     }
