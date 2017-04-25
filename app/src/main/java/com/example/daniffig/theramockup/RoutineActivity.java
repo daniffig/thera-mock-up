@@ -2,17 +2,11 @@ package com.example.daniffig.theramockup;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.text.Layout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
-
-import org.w3c.dom.Text;
-
-import java.util.zip.Inflater;
+import com.example.daniffig.theramockup.model.Routine;
 
 public class RoutineActivity extends AppCompatActivity {
 

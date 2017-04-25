@@ -1,4 +1,4 @@
-package com.example.daniffig.theramockup;
+package com.example.daniffig.theramockup.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Exercise;
+import com.example.daniffig.theramockup.R;
+import com.example.daniffig.theramockup.model.Exercise;
 
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
         public ExerciseViewHolder(View v) {
             super(v);
-            tvName = (TextView) v.findViewById(R.id.tvExerciseTitle);
+            tvName = (TextView) v.findViewById(R.id.tvExerciseName);
         }
     }
 }

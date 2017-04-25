@@ -11,29 +11,30 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/ivRoutineImage"
+            android:id="@+id/ivExerciseTypeImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
             app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
-            android:id="@+id/tvRoutineName"
+            android:id="@+id/tvExerciseTypeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="tvExercisesTypeName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/ivRoutineImage"
-            android:text="tvRoutineName"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:layout_toEndOf="@+id/ivExerciseTypeImage" />
 
         <TextView
-            android:id="@+id/tvRoutineDescription"
+            android:id="@+id/tvExerciseTypeDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvRoutineName"
-            android:layout_toEndOf="@+id/ivRoutineImage"
-            android:text="tvRoutineDescription" />
+            android:text="tvExerciseTypeDescription"
+            android:layout_below="@+id/tvExerciseTypeName"
+            android:layout_toEndOf="@+id/ivExerciseTypeImage" />
+
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

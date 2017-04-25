@@ -10,7 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
+import com.example.daniffig.theramockup.adapters.RoutineAdapter;
+import com.example.daniffig.theramockup.model.Routine;
 
 /**
  * Created by daniffig on 19/04/17.

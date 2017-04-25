@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
+import com.example.daniffig.theramockup.model.Routine;
 
 import java.util.List;
 

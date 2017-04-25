@@ -1,4 +1,4 @@
-package com.example.daniffig.theramockup.com.example.daniffig.theramockup.model;
+package com.example.daniffig.theramockup.model;
 
 import java.util.ArrayList;
 import java.util.List;

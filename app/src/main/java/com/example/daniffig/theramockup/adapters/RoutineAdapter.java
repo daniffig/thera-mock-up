@@ -1,4 +1,4 @@
-package com.example.daniffig.theramockup;
+package com.example.daniffig.theramockup.adapters;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Routine;
+import com.example.daniffig.theramockup.R;
+import com.example.daniffig.theramockup.RoutineActivity;
+import com.example.daniffig.theramockup.model.Routine;
 
 import java.util.List;
 
@@ -60,7 +62,7 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.RoutineV
 
         public RoutineViewHolder(View v) {
             super(v);
-            tvName = (TextView) v.findViewById(R.id.tvRoutineTitle);
+            tvName = (TextView) v.findViewById(R.id.tvRoutineName);
         }
     }
 }

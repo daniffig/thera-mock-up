@@ -8,10 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.daniffig.theramockup.com.example.daniffig.theramockup.model.Exercise;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.daniffig.theramockup.adapters.ExerciseTypeAdapter;
+import com.example.daniffig.theramockup.model.ExerciseType;
 
 /**
  * Created by daniffig on 19/04/17.
@@ -27,13 +25,13 @@ public class ExercisesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main_exercises, container, false);
 
-        RecyclerView rvExercises = (RecyclerView) rootView.findViewById(R.id.rvExercises);
-        rvExercises.setHasFixedSize(true);;
+        RecyclerView rvExerciseTypes = (RecyclerView) rootView.findViewById(R.id.rvExerciseTypes);
+        rvExerciseTypes.setHasFixedSize(true);;
         LinearLayoutManager llm = new LinearLayoutManager(this.getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-        rvExercises.setLayoutManager(llm);
+        rvExerciseTypes.setLayoutManager(llm);
 
-        rvExercises.setAdapter(new ExerciseAdapter(Exercise.doSelectAll()));
+        rvExerciseTypes.setAdapter(new ExerciseTypeAdapter(ExerciseType.doSelectAll()));
 
         return rootView;
     }
