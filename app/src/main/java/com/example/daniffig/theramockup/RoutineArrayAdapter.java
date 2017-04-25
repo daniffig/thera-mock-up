@@ -31,9 +31,9 @@ public class RoutineArrayAdapter extends ArrayAdapter<Routine> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(R.layout.list_routine, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.tvRoutinelabel);
+        TextView textView = (TextView) rowView.findViewById(R.id.textView2);
 
-        textView.setText(values.get(position).name);
+        textView.setText(values.get(position).getName());
 
         return rowView;
     }

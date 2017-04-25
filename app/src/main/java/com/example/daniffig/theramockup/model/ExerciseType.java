@@ -14,13 +14,14 @@ public class ExerciseType {
     private String name;
     private int imageId;
 
-    static private long CURRENT_ID = 1;
+    static private Long CURRENT_ID = 1L;
+    static private List<ExerciseType> DATABASE = null;
 
     public ExerciseType(String name, int imageId) {
         super();
-        this.id = ExerciseType.CURRENT_ID++;
-        this.name = name;
-        this.imageId = imageId;
+        this.setId(ExerciseType.CURRENT_ID++);
+        this.setName(name);
+        this.setImageId(imageId);
     }
 
     public long getId() {
@@ -50,18 +51,16 @@ public class ExerciseType {
     // class methods
 
     static public List<ExerciseType> doSelectAll() {
-        List<ExerciseType> exerciseTypeList = new ArrayList<ExerciseType>();
+        if (DATABASE == null) {
+            DATABASE = new ArrayList<ExerciseType>();
 
-        exerciseTypeList.add(new ExerciseType("Tongue exercises", R.mipmap.tongue_exercises));
-        exerciseTypeList.add(new ExerciseType("Mouth exercises", R.mipmap.mouth_exercises));
-        exerciseTypeList.add(new ExerciseType("Lips exercises", R.mipmap.lips_exercises));
-        exerciseTypeList.add(new ExerciseType("Jaw exercises", R.mipmap.jaw_exercises));
+            DATABASE.add(new ExerciseType("Tongue exercises", R.mipmap.tongue_exercises));
+            DATABASE.add(new ExerciseType("Mouth exercises", R.mipmap.mouth_exercises));
+            DATABASE.add(new ExerciseType("Lips exercises", R.mipmap.lips_exercises));
+            DATABASE.add(new ExerciseType("Jaw exercises", R.mipmap.jaw_exercises));
+        }
 
-        return exerciseTypeList;
-    }
-
-    static public ExerciseType doSelectOne(int i) {
-        return ExerciseType.doSelectAll().get(i);
+        return DATABASE;
     }
 
     static public ExerciseType doSelectById(long id) {

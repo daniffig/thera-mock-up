@@ -1,5 +1,6 @@
 package com.example.daniffig.theramockup.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.daniffig.theramockup.ExerciseTypeActivity;
 import com.example.daniffig.theramockup.R;
 import com.example.daniffig.theramockup.model.ExerciseType;
 
@@ -17,9 +19,11 @@ import java.util.List;
  */
 
 public class ExerciseTypeAdapter extends RecyclerView.Adapter<ExerciseTypeAdapter.ExerciseTypeViewHolder> {
+    private RecyclerView rvView;
     private List<ExerciseType> exerciseTypeList;
 
-    public ExerciseTypeAdapter(List<ExerciseType> exerciseTypeList) {
+    public ExerciseTypeAdapter(RecyclerView rvView, List<ExerciseType> exerciseTypeList) {
+        this.rvView = rvView;
         this.exerciseTypeList = exerciseTypeList;
     }
 
@@ -30,10 +34,19 @@ public class ExerciseTypeAdapter extends RecyclerView.Adapter<ExerciseTypeAdapte
 
     @Override
     public void onBindViewHolder(ExerciseTypeAdapter.ExerciseTypeViewHolder exerciseTypeViewHolder, int i) {
-        ExerciseType exerciseType = exerciseTypeList.get(i);
+        final ExerciseType exerciseType = exerciseTypeList.get(i);
 
         exerciseTypeViewHolder.tvName.setText(exerciseType.getName());
         exerciseTypeViewHolder.ivImage.setImageResource(exerciseType.getImageId());
+
+        exerciseTypeViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exercisesTypeActivityIntent = new Intent(ExerciseTypeAdapter.this.rvView.getContext(), ExerciseTypeActivity.class);
+                exercisesTypeActivityIntent.putExtra("EXERCISE_TYPE_ID", exerciseType.getId());
+                ExerciseTypeAdapter.this.rvView.getContext().startActivity(exercisesTypeActivityIntent);
+            }
+        });
     }
 
     @Override

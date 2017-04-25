@@ -29,7 +29,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     @Override
     public void onBindViewHolder(ExerciseViewHolder exerciseViewHolder, int i) {
-        Exercise exercise = exerciseList.get(i);
+        final Exercise exercise = exerciseList.get(i);
 
         exerciseViewHolder.tvName.setText(exercise.name);
     }

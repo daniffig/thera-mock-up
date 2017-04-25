@@ -31,7 +31,7 @@ public class ExercisesFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvExerciseTypes.setLayoutManager(llm);
 
-        rvExerciseTypes.setAdapter(new ExerciseTypeAdapter(ExerciseType.doSelectAll()));
+        rvExerciseTypes.setAdapter(new ExerciseTypeAdapter(rvExerciseTypes, ExerciseType.doSelectAll()));
 
         return rootView;
     }

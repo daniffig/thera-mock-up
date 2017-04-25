@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.example.daniffig.theramockup.model.Routine;
 
 public class RoutineActivity extends AppCompatActivity {
-
     private Routine routine;
 
     @Override
@@ -21,13 +20,13 @@ public class RoutineActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        routine = Routine.doSelectOne(getIntent().getIntExtra("ROUTINE_ID", 0));
+        routine = Routine.doSelectById(getIntent().getLongExtra("ROUTINE_ID", 0));
 
-        setTitle(routine.name);
+        setTitle(routine.getName());
 
         TextView cvRoutineDetailTitle = (TextView) findViewById(R.id.tvRoutineDetailTitle);
 
-        cvRoutineDetailTitle.setText(routine.name);
+        cvRoutineDetailTitle.setText(routine.getName());
 
         ListView lvRoutineExercises = (ListView) findViewById(R.id.lvRoutineExercises);
 

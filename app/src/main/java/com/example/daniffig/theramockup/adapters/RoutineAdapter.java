@@ -20,7 +20,6 @@ import java.util.List;
 public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.RoutineViewHolder> {
     private RecyclerView rvView;
     private List<Routine> routineList;
-    private int position;
 
     public RoutineAdapter(RecyclerView rvView, List<Routine> routineList) {
         this.rvView = rvView;
@@ -33,16 +32,16 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.RoutineV
     }
 
     @Override
-    public void onBindViewHolder(final RoutineViewHolder routineViewHolder, int i) {
-        Routine routine = routineList.get(i);
+    public void onBindViewHolder(RoutineViewHolder routineViewHolder, int i) {
+        final Routine routine = routineList.get(i);
 
-        routineViewHolder.tvName.setText(routine.name);
+        routineViewHolder.tvName.setText(routine.getName());
 
         routineViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent routineActivityIntent = new Intent(RoutineAdapter.this.rvView.getContext(), RoutineActivity.class);
-                routineActivityIntent.putExtra("ROUTINE_ID", routineViewHolder.getAdapterPosition());
+                routineActivityIntent.putExtra("ROUTINE_ID", routine.getId());
                 RoutineAdapter.this.rvView.getContext().startActivity(routineActivityIntent);
             }
         });
@@ -51,8 +50,6 @@ public class RoutineAdapter extends RecyclerView.Adapter<RoutineAdapter.RoutineV
     @Override
     public RoutineViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_routine, viewGroup, false);
-
-        this.position = i;
 
         return new RoutineViewHolder(itemView);
     }
