@@ -39,7 +39,7 @@ public class RoutinesFragment extends Fragment {
         /*
         ListView listViewRoutines = (ListView) rootView.findViewById(R.id.listViewRoutines);
 
-        listViewRoutines.setAdapter(new RoutineArrayAdapter(this.getContext(), ROUTINES));
+        listViewRoutines.setAdapter(new RoutineExerciseArrayAdapter(this.getContext(), ROUTINES));
         listViewRoutines.setTextFilterEnabled(true);
 
         listViewRoutines.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -14,6 +14,7 @@ public class Routine {
     private Long id;
     private String name;
     private String description;
+    private List<RoutineExercise> exercises = new ArrayList<RoutineExercise>();
 
     static private Long CURRENT_ID = 1L;
     static private List<Routine> DATABASE = null;
@@ -22,6 +23,10 @@ public class Routine {
         super();
         this.setId(CURRENT_ID++);
         this.setName(name);
+
+        for (int i = 0; i < 4; i++) {
+            this.getExercises().add(RoutineExercise.generateRandomFor(this));
+        }
     }
 
     public long getId() {
@@ -72,5 +77,13 @@ public class Routine {
             if (r.getId() == id) return r;
         }
         return null;
+    }
+
+    public List<RoutineExercise> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(List<RoutineExercise> exercises) {
+        this.exercises = exercises;
     }
 }

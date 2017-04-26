@@ -10,15 +10,15 @@ import android.view.ViewGroup;
  * Created by daniffig on 19/04/17.
  */
 
-public class CalendarFragment extends Fragment {
+public class StatsFragment extends Fragment {
 
-    public CalendarFragment() {
+    public StatsFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main_calendar, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_main_stats, container, false);
 
         return rootView;
     }

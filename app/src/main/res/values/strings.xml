@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TheraMockUp</string>
     <string name="action_settings">Settings</string>
-    <string name="fragment_main_calendar_name">Calendar</string>
+    <string name="fragment_main_stats_name">Stats</string>
     <string name="fragment_main_exercises_name">Exercises</string>
     <string name="fragment_main_routines_name">Routines</string>
     <string name="title_activity_routine">RoutineActivity</string>

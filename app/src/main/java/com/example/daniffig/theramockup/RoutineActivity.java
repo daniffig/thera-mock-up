@@ -24,13 +24,13 @@ public class RoutineActivity extends AppCompatActivity {
 
         setTitle(routine.getName());
 
-        TextView cvRoutineDetailTitle = (TextView) findViewById(R.id.tvRoutineDetailTitle);
+        TextView cvRoutineDetailTitle = (TextView) findViewById(R.id.tvRoutineDetailName);
 
         cvRoutineDetailTitle.setText(routine.getName());
 
         ListView lvRoutineExercises = (ListView) findViewById(R.id.lvRoutineExercises);
 
-        lvRoutineExercises.setAdapter(new RoutineArrayAdapter(this.getApplicationContext(), Routine.doSelectAll()));
+        lvRoutineExercises.setAdapter(new RoutineExerciseArrayAdapter(this.getApplicationContext(), routine.getExercises()));
     }
 
 }

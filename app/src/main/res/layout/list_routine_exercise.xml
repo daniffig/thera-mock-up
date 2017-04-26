@@ -6,18 +6,18 @@
     android:padding="5dp">
 
     <TextView
-        android:id="@+id/tvRoutine"
+        android:id="@+id/tvListRoutineName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="textView2"
+        android:text="tvListRoutineName"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvListRoutineRepetitions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:text="15s"
+        android:text="tvListRoutineRepetitions"
         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 </RelativeLayout>
